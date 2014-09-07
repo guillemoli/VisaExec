@@ -142,7 +142,7 @@ int sendSCPI(ViSession instr,char *strCmd, char *buffer)
 
 	/* Send SCPI Command*/
 	
-	Sleep(50); // Magic! To avoid timeout errors // Bad firmware on "chinese" instruments ??
+	Sleep(50); // Magic! To avoid timeout errors
 
 	status = viWrite(instr, (ViBuf) strCmd, strlen(strCmd), &retCount);
 		if (status < VI_SUCCESS) 
